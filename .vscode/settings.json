@@ -1,0 +1,90 @@
+{
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/python;${env:PYTHONPATH}"
+    },
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/python"
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}/my_venv/bin/python3.10",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSaveMode": "file",
+        "editor.formatOnSave": true,
+        "editor.indentSize": 2,
+        "editor.wordBasedSuggestions": "off",
+        "files.trimTrailingWhitespace": true,
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "120"
+    ],
+    "black-formatter.lineLength": 120,
+    "python.languageServer": "Pylance",
+    "editor.formatOnSave": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "dotnet.exe",
+    "cmake.generator": "Ninja",
+    "cmake.languageSupport.enableFileAPI": true,
+    "cmake.languageSupport.dotnetPath": "dotnet.exe",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureSettings": {
+        "CMAKE_CUDA_ARCHITECTURES": "87" // Ampere
+    },
+    "cmake.configureEnvironment": {},
+    "cmake.buildEnvironment": {},
+    "cmake.debugConfig": {
+        "visualizerFile": "${workspaceFolder}/assert/qt6.natvis",
+        "console": "internalConsole", // 调试控制台
+    },
+    "debug.terminal.clearBeforeReusing": true, // 每次调试前清除终端
+    "debug.internalConsoleOptions": "openOnSessionStart", // 调试时自动打开调试控制台
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.autocomplete": "disabled", // So you don't get autocomplete from both extensions.
+    "C_Cpp.errorSquiggles": "disabled", // So you don't get error squiggles from both extensions (clangd's seem to be more reliable anyway).
+    "clangd.path": "clangd",
+    "clangd.onConfigChanged": "restart",
+    "clangd.restartAfterCrash": true,
+    "clangd.checkUpdates": false,
+    "clangd.arguments": [
+        "--log=error",
+        "--pretty",
+        "--background-index=false",
+        "--pch-storage=memory",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--function-arg-placeholders=true",
+        "--header-insertion=iwyu",
+        "--compile-commands-dir=${workspaceFolder}/build"
+    ],
+    "files.exclude": { // 排除文件和文件夹,使它们在资源管理器中不可见
+        "**/.git": true,
+        "**/build": true,
+        "**/.cache": true,
+    },
+    "search.exclude": { // 排除文件和文件夹,使它们不在搜索结果中不可见
+        "**/.git": true,
+        "**/build": true,
+    },
+    "files.watcherExclude": { // 排除文件和文件夹,使它们不被文件监视器监控,从而减少性能开销,赞
+        "**/build/**": true,
+        "**/.git/**": true,
+    },
+    "files.associations": {
+        //"*.cu": "cuda",
+        //"*.cuh": "cuda",
+        "*.cu": "cpp",
+        "optional": "cpp",
+        "functional": "cpp",
+        "utility": "cpp"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true
+    },
+    "[cuda]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.formatOnSave": true
+    }
+}

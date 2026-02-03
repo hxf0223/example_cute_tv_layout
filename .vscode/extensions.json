@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "nvidia.nsight-vscode",
+        "llvm-vs-code-extensions.vscode-clangd",
+        //"kriegalex.vscode-cudacpp"
+    ]
+}
