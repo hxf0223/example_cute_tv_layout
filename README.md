@@ -19,6 +19,11 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ```bash
-pip install nvidia-cutlass-dsl
+# 查看安装的CUDA相关包，有版本要求
+pip list | grep cuda
+```
+
+```bash
+pip install nvidia-cutlass-dsl cuda-python==12.9.1
 pip install /home/hxf0223/work/cuda/cute-viz
 ```

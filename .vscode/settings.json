@@ -20,14 +20,13 @@
         "--line-length",
         "120"
     ],
-    "black-formatter.lineLength": 120,
     "python.languageServer": "Pylance",
     "editor.formatOnSave": true,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "dotnet.exe",
+    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "dotnet",
     "cmake.generator": "Ninja",
     "cmake.languageSupport.enableFileAPI": true,
-    "cmake.languageSupport.dotnetPath": "dotnet.exe",
+    "cmake.languageSupport.dotnetPath": "dotnet",
     "cmake.buildDirectory": "${workspaceFolder}/build",
     "cmake.configureSettings": {
         "CMAKE_CUDA_ARCHITECTURES": "87" // Ampere
