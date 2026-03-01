@@ -6,7 +6,7 @@
     "python.analysis.extraPaths": [
         "${workspaceFolder}/python"
     ],
-    "python.defaultInterpreterPath": "${workspaceFolder}/my_venv/bin/python3.10",
+    "python.defaultInterpreterPath": "${workspaceFolder}/env310/bin/python",
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.defaultFormatter": "ms-python.black-formatter",
