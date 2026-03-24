@@ -1,12 +1,15 @@
 {
     "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/python;${env:PYTHONPATH}"
+        "PYTHONPATH": "${workspaceFolder}/python:${env:PYTHONPATH}",
+        "VIRTUAL_ENV": "${workspaceFolder}/env310",
+        "PATH": "${workspaceFolder}/env310/bin:${env:PATH}"
     },
     "python.envFile": "${workspaceFolder}/.env",
     "python.analysis.extraPaths": [
         "${workspaceFolder}/python"
     ],
-    "python.defaultInterpreterPath": "${workspaceFolder}/env310/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.defaultFormatter": "ms-python.black-formatter",
